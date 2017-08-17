@@ -26,13 +26,13 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CProject.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Cproject2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CProject1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CProject3.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

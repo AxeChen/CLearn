@@ -12,11 +12,16 @@ int test4();
 int test5();
 int test5();
 
-int main() {
+void sortt();
+void swap();
+void swap2();
+void swap3();
 
-	test3();
-	return 0;
-}
+//int main() {
+//
+//	test3();
+//	return 0;
+//}
 
 //////////////指针的定义和运算//////////////////////
 
@@ -108,14 +113,14 @@ int test4() {
 	char *name[] = { "hello", "dongNao", "Alvin", "world" };
 
 	int i, n = 4;
-	sort(name, n);
+	sortt(name, n);
 	for (i = 0; i < n; i++){
 		printf("%s\n", name[i]);
 	}
 
 	// 数组指针
 	// p2 指向的是？指向的是一个数组，一个有5个元素的数组
-	char(*p2)[5];
+	//char(*p2)[5];
 	//p2 是一个指针变量名
 	system("pause");
 	return 0;
@@ -123,7 +128,7 @@ int test4() {
 
 // 参数，是char 类型的指针数组
 //name[i]是一个指针（通过指针地址进行排序）
-void sort(char *name[], int n) {
+void sortt(char *name[], int n) {
 	char *temp;
 	int i, j;
 	for (i = 0; i < n; i++) {
@@ -155,12 +160,12 @@ int test5() {
 	//int ***p3;
 	//p3 = &p2;
 	//***p3 = p2
-
 	//int * * p3;
 	return 0;
 }
 
 //////////////////////////////指针和函数参数//////////////////////////////////
+
 int test6() {
 	int a, b;
 	a = 10;
