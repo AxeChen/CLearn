@@ -9,11 +9,11 @@ int plus2(int *a, int *b);
 char plus3(char *a, char *b);
 void test3_3();
 
-int main() {
-	test3_3();
-	system("pause");
-	return 0;
-}
+//int main() {
+//	test3_3();
+//	system("pause");
+//	return 0;
+//}
 
 ////////////////////函数指针////////////////////////
 // 操作步骤：1、明确需要调用函数的参数类型和返回类型 int plus(int a,int b)

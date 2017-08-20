@@ -29,10 +29,13 @@
     <ClCompile Include="Cproject2.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="CProject1.cpp">
+    <ClCompile Include="CProject3.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="CProject3.c">
+    <ClCompile Include="Cproject4.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CProject1.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
