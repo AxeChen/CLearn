@@ -54,12 +54,127 @@ void test3_3() {
 	char destination[25];
 	char *blank = "    ", *c = "C++", *Borland = "Borland";
 	strcpy(destination, Borland);  // 将 *Borland 复制 给destination
-	strcat(destination, blank); // 将 blank拼接到 destination后面
+        strcat(destination, blank); // 将 blank拼接到 destination后面
 	strcat(destination, c);
 	printf("%s\n", destination);
 }
 ```
+#### 8月20号
+* 结构体  
+三种初始化方式：  
+```
+//第一种
+struct People {
+	char name[10];
+	int age;
+}lucy = { "dd",2 };
 
+
+int test4_1() {
+	//第二种
+        struct People people = {"xl",28};
+	printf(" people1 %s   %d \n",people.name,people.age);
+
+	//第三种
+        struct People2 people2;
+	people2.age = 15;
+	strcpy(people2.name,"axe");
+
+	printf(" people2 %s   %d \n", people2.name, people2.age);
+	return 0;
+}
+
+```
+* 结构体数组
+```
+void test4_2() {
+	//初始化1
+	struct People peo[3] = { {"a",30},{"b",20},{"c",60} };
+	for (int i = 0;i<3;i++) {
+		printf(" people%d    %s   %d \n",i, peo[i].name, peo[i].age);
+	}
+	//printf("peo address: %#x\n", peo);
+	//初始化2
+	struct People peo1[4];
+	for (int i = 0;i<4;i++) {
+		peo1[i].age = 10;
+		strcpy(peo1[i].name, "lucy");
+	}
+	for (int i = 0; i<4; i++) {
+		printf(" people%d    %s   %d \n", i, peo1[i].name, peo1[i].age);
+	}
+}
+```
+
+* 结构体指针  
+```
+void test4_2() {
+        struct People3 *ppeo3;
+	ppeo3 = (struct People3 *)malloc(sizeof(struct People3) * 1);
+	memset(ppeo3, 0, sizeof(struct People3) * 1);
+	ppeo3->age = 10;
+	ppeo3->name = "ha sa ki";
+	printf(" People3 :   %s   %d \n", ppeo3->name, ppeo3->age);
+}
+```
+
+* 结构体指针数组  
+两种初始化：
+1、直接等于一个数组  
+2、定义一个新的数组  
+a）定义一个指针结构体数组  struct People3 *ppeo2;  
+b）分配内存 ppeo2 = (struct People3 *)malloc(sizeof(struct People3)*4);  
+c） 初始化memset(ppeo2, 0, sizeof(struct People3) * 4);  
+
+```
+void test4_2() {
+	//初始化1
+	struct People peo[3] = { {"a",30},{"b",20},{"c",60} };
+
+	//第一种初始化
+	struct People *ppeo1 = peo;
+
+	// 第二种初始化
+	//1、定义
+	struct People3 *ppeo2;
+	//2、分配内存
+	ppeo2 = (struct People3 *)malloc(sizeof(struct People3)*4);
+	//3、初始化（memset给系统内存进行赋值）
+	memset(ppeo2, 0, sizeof(struct People3) * 4);
+
+	for (int i = 0; i < 4; i++) {
+		(ppeo2 + i)->age = 20 + i;
+		(ppeo2 + i)->name = "lucy";
+	
+		/*	ppeo[i].age = 20 + i;
+			strcpy(peo1[i].name, "lucy");*/
+	}
+
+    for (int i = 0; i<4; i++) {
+		printf(" people%d    %s   %d \n", i, ppeo2[i].name, ppeo2[i].age);
+	}
+}
+```
+
+* 结构体中添加函数指针 
+
+用法和函数指针一样，只是这个是在结构体中使用。  
+```
+struct Man {
+	int age;
+	char *name;
+	int(*Msg)(char *, int);
+};
+```
+* 结构体中添加结构体指针
+注意： 为什么是结构体指针 ? 因为结构体中只能包含结构体指针！！  
+具体实现：源码中单链表的实现。  
+```
+struct Node {
+	int data;
+	struct Node *next; // 结构体中只能存在结构体指针
+};
+```
            
 
 
