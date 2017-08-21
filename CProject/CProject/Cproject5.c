@@ -75,11 +75,11 @@ void test5_4() {
 	printf("a: %d, b: %c, c: %f\n", unio.a, unio.b, unio.c);
 }
 
-int main() {
-	test5_4();
-	system("pause");
-	return 0;
-}
+//int main() {
+//	test5_4();
+//	system("pause");
+//	return 0;
+//}
 
 ///////Ã¶¾Ù
 enum {

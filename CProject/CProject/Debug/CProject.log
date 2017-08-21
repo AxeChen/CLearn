@@ -1,6 +1,5 @@
-﻿  Cproject5.c
-d:\gitcode\clearn\cproject\cproject\cproject5.c(74): warning C4477: “printf”: 格式字符串“%#x”需要类型“unsigned int”的参数，但可变参数 1 拥有了类型“int *”
-d:\gitcode\clearn\cproject\cproject\cproject5.c(74): warning C4477: “printf”: 格式字符串“%#x”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“char *”
-d:\gitcode\clearn\cproject\cproject\cproject5.c(74): warning C4477: “printf”: 格式字符串“%#x”需要类型“unsigned int”的参数，但可变参数 3 拥有了类型“float *”
+﻿  Cproject6.c
+d:\gitcode\clearn\cproject\cproject\cproject6.c(40): warning C4098: “test6_2”:“void”函数返回值
+d:\gitcode\clearn\cproject\cproject\cproject6.c(69): warning C4098: “test6_3”:“void”函数返回值
   CProject.vcxproj -> D:\gitcode\CLearn\CProject\Debug\CProject.exe
   CProject.vcxproj -> D:\gitcode\CLearn\CProject\Debug\CProject.pdb (Full PDB)
