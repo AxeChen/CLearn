@@ -169,13 +169,13 @@ void test4_5() {
 	}
 }
 
-int main() {
-	//test4_1();
-	//test4_2();
-	//test4_3();
-	//test4_4();
-	test4_5();
-	system("pause");
-	return 0;
-}
+//int main() {
+//	//test4_1();
+//	//test4_2();
+//	//test4_3();
+//	//test4_4();
+//	test4_5();
+//	system("pause");
+//	return 0;
+//}
 
